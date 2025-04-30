@@ -1,0 +1,94 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Match Bet - Barcelona vs Inter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    h1 {
+      text-align: center;
+      color: #22d3ee;
+    }
+    .bet-option {
+      background: #334155;
+      margin: 15px 0;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+    select, button {
+      padding: 10px;
+      width: 100%;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+    button {
+      margin-top: 15px;
+      background: #22c55e;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #16a34a;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Barcelona vs Inter Milan - Live Bet</h1><div class="bet-option">
+  <label for="winner">Who Will Win?</label>
+  <select id="winner">
+    <option>Barcelona</option>
+    <option>Inter Milan</option>
+    <option>Draw</option>
+  </select>
+</div>
+
+<div class="bet-option">
+  <label for="goalKick">Who Will Have More Goal Kicks?</label>
+  <select id="goalKick">
+    <option>Barcelona</option>
+    <option>Inter Milan</option>
+  </select>
+</div>
+
+<div class="bet-option">
+  <label for="firstGoal">Who Will Score First?</label>
+  <select id="firstGoal">
+    <option>Barcelona</option>
+    <option>Inter Milan</option>
+    <option>No Goal</option>
+  </select>
+</div>
+
+<button onclick="submitBet()">Submit Your Prediction</button>
+
+<p id="result" style="margin-top: 20px;"></p>
+
+  </div>  <script>
+    function submitBet() {
+      const winner = document.getElementById("winner").value;
+      const goalKick = document.getElementById("goalKick").value;
+      const firstGoal = document.getElementById("firstGoal").value;
+
+      document.getElementById("result").innerText = `Prediction Saved:\nWinner: ${winner}, Goal Kicks: ${goalKick}, First Goal: ${firstGoal}`;
+    }
+  </script></body>
+</html>
